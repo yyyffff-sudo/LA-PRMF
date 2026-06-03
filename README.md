@@ -90,12 +90,10 @@ python train.py --config_file configs/train_mosei.yaml
 python train.py --config_file configs/train_sims.yaml
 ```
 
-To reproduce results over the three random seeds (1111, 1112, 1113), override the seed from the command line:
+To reproduce results over the three random seeds, override the seed from the command line:
 
 ```bash
-python train.py --config_file configs/train_mosi.yaml --seed 1111
-python train.py --config_file configs/train_mosi.yaml --seed 1112
-python train.py --config_file configs/train_mosi.yaml --seed 1113
+python train.py --config_file configs/train_mosi.yaml
 ```
 
 During training, 50% of the samples are randomly selected in each epoch and 0–100% of the information in each modality is randomly erased to simulate missing modalities. The model trains for 100 epochs with a batch size of 32. After each epoch the model is evaluated on the test set, and the best checkpoint for each metric is automatically saved to:
